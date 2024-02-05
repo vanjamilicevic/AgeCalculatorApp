@@ -1,0 +1,119 @@
+@import 'default_settings';
+@import 'variables';
+
+.main-container {
+    background-color: white;
+    max-width: 800px;
+    padding: 50px;
+    padding-right: 50px;
+    border-radius: 20px;
+    border-bottom-right-radius: 30%;
+}
+
+.inputs-section {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 50px;
+    border-bottom: 1px solid $border;
+    margin-bottom: 30px;
+}
+
+.input-container {
+    width: 23%;
+}
+
+.day-input-container,
+.month-input-container {
+    margin-right: 30px;
+}
+
+.input-title {
+    font-size: $heading-s;
+    letter-spacing: 3.3px;
+    font-weight: 700;
+    color: $grey-text;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    border: 1px solid $border;
+    padding: 15px;
+    width: 100%;
+    border-radius: 7px;
+    font-size: $heading-M;
+    font-weight: 700;
+    transition: all .5s ease;
+    &:hover {
+        cursor: pointer;
+        border: 1px solid $purple;
+    }
+    &::placeholder {
+        font-size: $heading-M;
+        font-weight: 700;
+        color: hsl(0, 1%, 52%);
+    }
+    &:focus {
+        color: black;
+        outline: none;
+    }
+}
+
+.circle-button {
+    position: absolute;
+    background-color: $purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 100px;
+    bottom: -35px;
+    right: 0;
+    transition: all .5s ease;
+    &:hover {
+        cursor: pointer;
+        background-color: black;
+    }
+}
+
+.result-text {
+    font-size: $heading-L;
+    color: black;
+    font-weight: 800;
+    letter-spacing: -2.2px;
+    line-height: 110%;
+}
+
+.result {
+    color: $purple;
+}
+
+.error-class {
+    border: 1px solid #FF5959;
+    color: #FF5959;
+    &:focus{
+        border: 1px solid #FF5959;
+        color: #FF5959;
+    }
+    &:hover {
+        border: 1px solid #FF5959;
+    }
+}
+
+.error-title-class {
+    color: #FF5959;
+}
+
+.error-empty-text,
+.error-invalid-field {
+    color: #FF5959;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.not-visible {
+    display: none;
+}

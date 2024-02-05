@@ -5,33 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Age calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="styles/style.css">
+  <title>Age calculator app</title>
 </head>
 <body>
-
-  Day
-  DD
-
-  Month
-  MM
-
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <main class="main-container">
+    <section class="inputs-section">
+      <div class="day-input-container input-container">
+        <p id="day-title" class="input-title">Day</p>
+        <input id="day-input" class="day-input input" type="text" placeholder="DD">
+        <p id="empty-text-error-day" class="error-empty-text not-visible">
+          <i>This field is required</i>
+        </p>
+        <p id="invalid-input-day" class="error-invalid-field not-visible">
+          <i>Must be a valid date</i>
+        </p>
+      </div>
+      <div class="month-input-container input-container">
+        <p id="month-title" class="input-title">Month</p>
+        <input id="month-input" class="month-input input" type="text" placeholder="MM">
+        <p id="empty-text-error-month" class="error-empty-text not-visible">
+          <i>This field is required</i>
+        </p>
+        <p id="invalid-input-month" class="error-invalid-field not-visible">
+          <i>Must be a valid date</i>
+        </p>
+      </div>
+      <div class="year-input-container input-container">
+        <p id="year-title" class="input-title">Year</p>
+        <input id="year-input" class="year-input input" type="text" placeholder="YYYY">
+        <p id="empty-text-error-year" class="error-empty-text not-visible">
+          <i>This field is required</i>
+        </p>
+        <p id="invalid-input-year" class="error-invalid-field not-visible">
+          <i>Must be a valid date</i>
+        </p>
+      </div>
+      <div id="button" class="circle-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44"><g fill="none" stroke="#FFF" stroke-width="2">
+          <path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g>
+        </svg>
+      </div>
+    </section>
+    <section class="result-section">
+      <div class="years-container">
+        <h1 class="years-result-and-text result-text"><i><span id="years-result" class="result years-result">- -</span> years</i></h1>
+      </div>
+      <div class="months-container">
+        <h1 class="months-result-and-text result-text"><i><span id="months-result" class="result months-result">- -</span> months</i></h1>
+      </div>
+      <div class="days-container">
+        <h1 class="days-result-and-text result-text"><i><span id="days-result" class="result days-result">- -</span> days</i></h1>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>

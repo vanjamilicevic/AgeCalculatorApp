@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: #F0F0F0;
+  font-family: "Poppins";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.main-container {
+  background-color: white;
+  max-width: 800px;
+  padding: 50px;
+  padding-right: 50px;
+  border-radius: 20px;
+  border-bottom-right-radius: 30%;
+}
+
+.inputs-section {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #DCDCDC;
+  margin-bottom: 30px;
+}
+
+.input-container {
+  width: 23%;
+}
+
+.day-input-container,
+.month-input-container {
+  margin-right: 30px;
+}
+
+.input-title {
+  font-size: 14px;
+  letter-spacing: 3.3px;
+  font-weight: 700;
+  color: #716F6F;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  border: 1px solid #DCDCDC;
+  padding: 15px;
+  width: 100%;
+  border-radius: 7px;
+  font-size: 32px;
+  font-weight: 700;
+  transition: all 0.5s ease;
+}
+.input:hover {
+  cursor: pointer;
+  border: 1px solid #854DFF;
+}
+.input::-moz-placeholder {
+  font-size: 32px;
+  font-weight: 700;
+  color: hsl(0, 1%, 52%);
+}
+.input::placeholder {
+  font-size: 32px;
+  font-weight: 700;
+  color: hsl(0, 1%, 52%);
+}
+.input:focus {
+  color: black;
+  outline: none;
+}
+
+.circle-button {
+  position: absolute;
+  background-color: #854DFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-radius: 100px;
+  bottom: -35px;
+  right: 0;
+  transition: all 0.5s ease;
+}
+.circle-button:hover {
+  cursor: pointer;
+  background-color: black;
+}
+
+.result-text {
+  font-size: 104px;
+  color: black;
+  font-weight: 800;
+  letter-spacing: -2.2px;
+  line-height: 110%;
+}
+
+.result {
+  color: #854DFF;
+}
+
+.error-class {
+  border: 1px solid #FF5959;
+  color: #FF5959;
+}
+.error-class:focus {
+  border: 1px solid #FF5959;
+  color: #FF5959;
+}
+.error-class:hover {
+  border: 1px solid #FF5959;
+}
+
+.error-title-class {
+  color: #FF5959;
+}
+
+.error-empty-text,
+.error-invalid-field {
+  color: #FF5959;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.not-visible {
+  display: none;
+}/*# sourceMappingURL=style.css.map */
