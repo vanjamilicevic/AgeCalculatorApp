@@ -14,19 +14,16 @@ let invalid_input_year = document.getElementById("invalid-input-year")
 let error_empty_text_day = document.getElementById("empty-text-error-day")
 let error_empty_text_month = document.getElementById("empty-text-error-month")
 let error_empty_text_year = document.getElementById("empty-text-error-year")
-let date = new Date()
 const months = [31, 0, 31, 30, 31, 30, 31, 31, 30, 31,30, 31]
-
-
-// console.log(date)
-// console.log(date.getFullYear())
-// console.log(date.getMonth() + 1)
-// console.log(date.getDate())
+let date = new Date()
 let year_value = 0
 let month_value = 0
 let day_value = 0
-// let d1  = new Date("1993-09-18")
-// console.log(date)
+let newDate = 0
+let diff = 0
+let diff_years = 0
+let diff_months = 0
+let diff_days = 0
 
 const isNumeric = (number) => {
     return /^-?\d+$/.test(number)
@@ -153,7 +150,6 @@ button.addEventListener("click", () => {
     } else if(year_input.value) {
         if(validateYear(parseInt(year_input.value))) {
             year_value = parseInt(year_input.value)
-            console.log(year_value)
             removeInvalidFieldError("year")
         } 
         
@@ -161,29 +157,36 @@ button.addEventListener("click", () => {
 
     if(year_value == 0 && !(year_input.value == "")) {
         addInvalidFieldError("year")
-    } else {
+    } else if(!(year_value == 0) && !(year_input.value == "")){
         removeInvalidFieldError("year")
     }
 
     if(month_value == 0 && !(month_input.value == "")) {
         addInvalidFieldError("month")
-    } else {
+    } else if (!(month_value == 0) && !(month_input.value == "")){
         removeInvalidFieldError("month")
     }
 
     if(day_value == 0 && !(day_input.value == "")) {
         addInvalidFieldError("day")
-    } else {
+    } else if(!(day_value == 0) && !(day_input.value == "")) {
         removeInvalidFieldError("day")
     }
 
-    
+    if(!(day_value == 0) && !(month_value == 0) && !(year_value == 0)) {
+        // new Date("1993-09-18")
+        day_value = day_value.toString()
+        month_value = month_value.toString()
+        year_value = year_value.toString()
+        newDate = new Date(year_value + "-" + month_value + "-" + day_value)
+        diff = date - newDate
+        diff_years = diff / 31536000000
+        diff_months = (diff % 31536000000)/2628000000
+        diff_days = ((diff % 31536000000) % 2628000000)/86400000
 
-
-    console.log("-------------")
-console.log(year_value)
-console.log(month_value)
-console.log(day_value)
-
+        day_result.innerHTML = Math.floor(diff_days)
+        month_result.innerHTML = Math.floor(diff_months)
+        year_result.innerHTML = Math.floor(diff_years)
+    }
 })
 

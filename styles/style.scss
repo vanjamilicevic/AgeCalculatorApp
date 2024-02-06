@@ -117,3 +117,59 @@
 .not-visible {
     display: none;
 }
+
+// -----------Media queries-----------
+@media only screen and (max-width: 790px) {
+    .main-container {
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .main-container{
+        padding: 20px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .result-text {
+        font-size: 56px;
+    }
+
+    .inputs-section {
+        justify-content: center;
+        padding-bottom: 80px;
+        margin-bottom: 70px;
+    }
+
+    .input-title {
+        font-size: 12px;
+    }
+
+    .input {
+        font-size: 20px;
+        padding: 10px;
+        &::placeholder {
+            font-size: 20px;
+        }
+        &:focus {
+            font-size: 20px;
+        }
+    }
+
+    .circle-button {
+        right: calc(50% - 25px);
+    }
+}
+
+@media only screen and (max-width: 1025px) and (max-height: 601px) {
+    body {
+        height: fit-content;
+        overflow: scroll;
+    }
+
+    .main-container {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+}
