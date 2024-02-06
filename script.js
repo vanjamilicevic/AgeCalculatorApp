@@ -180,13 +180,13 @@ button.addEventListener("click", () => {
         year_value = year_value.toString()
         newDate = new Date((year_value + "-" + month_value + "-" + day_value).replace(/\s/, 'T'))
         diff = date - newDate
-        diff_years = diff / 31536000000
-        diff_months = (diff % 31536000000)/2628000000
-        diff_days = ((diff % 31536000000) % 2628000000)/86400000
+        diff_years = (Math.floor(diff / 31536000000)).toString()
+        diff_months = (Math.floor((diff % 31536000000)/2628000000)).toString()
+        diff_days = (Math.floor(((diff % 31536000000) % 2628000000)/86400000)).toString()
 
-        day_result.innerHTML = Math.floor(diff_days)
-        month_result.innerHTML = Math.floor(diff_months)
-        year_result.innerHTML = Math.floor(diff_years)
+        day_result.innerHTML = diff_days
+        month_result.innerHTML = diff_months
+        year_result.innerHTML = diff_years
     }
 })
 
